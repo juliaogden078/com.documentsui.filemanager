@@ -1,0 +1,7 @@
+#!/bin/bash
+
+
+adb uninstall com.documentsui.filemanager
+rm ./app/build -fr 
+./gradlew assembleDebug 
+adb install ./app/build/outputs/apk/debug/app-debug.apk
